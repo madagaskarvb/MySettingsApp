@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Основные настройки">
+
+        <SwitchPreferenceCompat
+            android:key="notifications_enabled"
+            android:title="Уведомления"
+            android:summary="Включить/отключить уведомления"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="user_name"
+            android:title="Имя пользователя"
+            android:summary="Введите ваше имя"
+            android:dialogTitle="Введите имя пользователя"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:key="app_theme"
+            android:title="Тема приложения"
+            android:summary="Выберите тему приложения"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="light"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
